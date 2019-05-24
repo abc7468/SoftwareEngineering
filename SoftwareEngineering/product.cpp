@@ -1,6 +1,5 @@
 #include "Model.h"
 
-Product::Product() {}
 
 Product::Product(const string category, const string name, int price, int spare) 
 	:category(category), name(name), price(price), spare(spare)
@@ -8,7 +7,7 @@ Product::Product(const string category, const string name, int price, int spare)
 
 }
 
-
+Product::Product(){}
 int Product::GetPrice() {
 	return price;
 }

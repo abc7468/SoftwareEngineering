@@ -3,35 +3,39 @@
 #include <vector>
 
 using namespace std;
-//class User {
-//public:
-//	string GetName();
-//	string GetAddress();
-//	int GetPhoneNumber();
-//private:
-//	string name;
-//	string address;
-//	int phonenumber;
-//};
-//
-//class Member : public User {
-//public:
-//	vector<Product> GetBasket();
-//	vector<Product> SetBasket();
-//
-//private:
-//	string ID;
-//	string password;
-//	string gender;
-//	vector <Product> basket;
-//};
-//
-//class Manager : public Member {
-//public:
-//
-//private:
-//
-//};
+
+
+
+
+class User {
+public:
+	string GetName();
+	string GetAddress();
+	int GetPhoneNumber();
+private:
+	string name;
+	string address;
+	int phonenumber;
+};
+
+class Member : public User {
+public:
+	vector<Product> GetBasket();
+	vector<Product> SetBasket();
+
+private:
+	string ID;
+	string password;
+	string gender;
+	vector <Product> basket;
+};
+
+class Manager : public Member {
+public:
+
+private:
+
+};
 
 class Product {
 public:
@@ -49,13 +53,11 @@ private:
 	string category;
 	string name;
 };
-//
-//class Managing {
-//public:
-//
-//private:
-//	vector<Product> stand;
-//
-//	
-//};
+
+
+
+	
+typedef struct Managing{ 
+	vector<Product*> stand; 
+}Managing;
 
