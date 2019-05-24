@@ -4,7 +4,22 @@
 
 using namespace std;
 
+class Product {
+public:
+	Product();
+	Product(const string category, const string name, int price, int spare);
+	~Product();
+	int GetPrice();
+	int GetSpare();
+	string GetCategory();
+	string GetName();
 
+private:
+	int price;
+	int spare;
+	string category;
+	string name;
+};
 
 
 class User {
@@ -24,6 +39,9 @@ private:
 
 class Member : public User {
 public:
+	Member();
+	Member(const string name, const string address, int phoneNumber, const string ID, const string password, const string gender);
+	~Member();
 	vector<Product> GetBasket();
 	vector<Product> SetBasket();
 
@@ -41,28 +59,10 @@ private:
 
 };
 
-class Product {
-public:
-	Product();
-	Product(const string category, const string name, int price, int spare);
-	~Product();
-	int GetPrice();
-	int GetSpare();
-	string GetCategory();
-	string GetName();
 
-private:
-	int price;
-	int spare;
-	string category;
-	string name;
-};
 
 
 
 	
-typedef struct Managing{ 
-	vector<Product*> stand;
-	vector<Member*> memberList;
-}Managing;
+
 

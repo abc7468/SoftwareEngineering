@@ -16,6 +16,12 @@
     <Filter Include="소스 파일\Model">
       <UniqueIdentifier>{a0f48545-dfdf-416a-a75a-555987651102}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Controler">
+      <UniqueIdentifier>{c500294d-3a97-437c-a262-da7c86b0bf98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\View">
+      <UniqueIdentifier>{f91fb807-3124-4c84-b2cd-07e5603abe99}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model.h">
@@ -25,6 +31,9 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Controler.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Managing.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -37,6 +46,15 @@
     </ClCompile>
     <ClCompile Include="user.cpp">
       <Filter>소스 파일\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="member.cpp">
+      <Filter>소스 파일\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="controlMember.cpp">
+      <Filter>소스 파일\Controler</Filter>
+    </ClCompile>
+    <ClCompile Include="sign.cpp">
+      <Filter>소스 파일\View</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

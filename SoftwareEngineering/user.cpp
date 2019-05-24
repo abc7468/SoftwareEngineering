@@ -6,3 +6,4 @@ User::User(const string name, const string address, int phoneNumber)
 {
 
 }
+User::~User(){};
