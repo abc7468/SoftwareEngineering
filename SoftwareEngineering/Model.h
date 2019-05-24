@@ -9,13 +9,17 @@ using namespace std;
 
 class User {
 public:
+	User();
+	User(const string name, const string address, int phoneNumber);
+	~User();
+
 	string GetName();
 	string GetAddress();
 	int GetPhoneNumber();
 private:
 	string name;
 	string address;
-	int phonenumber;
+	int phoneNumber;
 };
 
 class Member : public User {
@@ -58,6 +62,7 @@ private:
 
 	
 typedef struct Managing{ 
-	vector<Product*> stand; 
+	vector<Product*> stand;
+	vector<Member*> memberList;
 }Managing;
 
