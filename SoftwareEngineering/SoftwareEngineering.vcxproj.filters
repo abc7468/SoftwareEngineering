@@ -56,5 +56,14 @@
     <ClCompile Include="sign.cpp">
       <Filter>소스 파일\View</Filter>
     </ClCompile>
+    <ClCompile Include="controlProduct.cpp">
+      <Filter>소스 파일\Controler</Filter>
+    </ClCompile>
+    <ClCompile Include="regist.cpp">
+      <Filter>소스 파일\View</Filter>
+    </ClCompile>
+    <ClCompile Include="Init.cpp">
+      <Filter>소스 파일\Controler</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

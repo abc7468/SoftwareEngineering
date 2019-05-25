@@ -7,4 +7,14 @@ Member::Member(const string name, const string address, int phoneNumber, const s
 
 };
 
+string Member::GetID() {
+	return ID;
+}
+string Member::GetPassword() {
+	return password;
+}
+string Member::GetGender() {
+	return gender;
+}
+
 Member::~Member() {};

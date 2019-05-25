@@ -26,9 +26,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="controlMember.cpp" />
+    <ClCompile Include="controlProduct.cpp" />
+    <ClCompile Include="Init.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="member.cpp" />
     <ClCompile Include="product.cpp" />
+    <ClCompile Include="regist.cpp" />
     <ClCompile Include="sign.cpp" />
     <ClCompile Include="user.cpp" />
   </ItemGroup>

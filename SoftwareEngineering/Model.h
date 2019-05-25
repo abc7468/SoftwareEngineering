@@ -44,7 +44,9 @@ public:
 	~Member();
 	vector<Product> GetBasket();
 	vector<Product> SetBasket();
-
+	string GetID();
+	string GetPassword();
+	string GetGender();
 private:
 	string ID;
 	string password;
@@ -52,11 +54,9 @@ private:
 	vector <Product> basket;
 };
 
-class Manager : public Member {
+class Root : public Member {
 public:
-
-private:
-
+	void registerProduct();
 };
 
 
