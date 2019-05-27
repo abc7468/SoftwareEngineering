@@ -1,8 +1,8 @@
 #include "Model.h"
 
 User::User() {};
-User::User(const string name, const string address, int phoneNumber) 
-	:name(name),address(address),phoneNumber(phoneNumber)
+User::User(const string name, const string address, int phoneNumber, int money) 
+	:name(name),address(address),phoneNumber(phoneNumber),money(money)
 {
 
 }
@@ -14,6 +14,16 @@ string User::GetAddress() {
 }
 int User::GetPhoneNumber() {
 	return phoneNumber;
+}
+
+int User::GetMoney()
+{
+	return money;
+}
+
+void User::SetMoney(int spareMoney)
+{
+	money = spareMoney;
 }
 
 User::~User(){};

@@ -18,10 +18,30 @@ void registProductView(struct Managing& managing) {
 }
 
 void standView(Managing& managing) {
-	int size = managing.productName.size();
+	system("cls");
+	int size = managing.stand.size();
 	cout << "\n\nNo\t카테고리\t상품이름\t가격\t남은수량\n";
 	for (int i = 0; i < size; i++) {
-		cout << i + 1 << ".\t" << managing.productCategory[i] << "\t\t" << managing.productName[i] << "\t\t" << managing.productPrice[i] << "\t" << managing.productSpare[i] << endl;
+		cout << i + 1 << ".\t" << managing.stand[i]->GetCategory() << "\t\t" << managing.stand[i]->GetName() << "\t\t" << managing.stand[i]->GetPrice() << "\t" << managing.stand[i]->GetSpare() << endl;
 	}
 	cout << "\n\n" << endl;
 }
+
+void basketView(Managing & managing)
+{
+	int index;
+	standView(managing);
+	cout << "몇번 상품을 장바구니에 담으시겠습니까?" << endl;
+	cin >> index;
+	index -= 1;
+
+	inputBasket(managing, index);
+	cout << "\n" << index + 1 << "번 상품을 장바구니에 담았습니다.\n";
+}
+
+void purchaseView(Managing & managing)
+{
+
+	purchase(managing);
+}
+

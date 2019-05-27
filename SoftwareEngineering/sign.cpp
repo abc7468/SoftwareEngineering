@@ -5,6 +5,7 @@ void signUpView(Managing& managing) {
 	string name;
 	string address;
 	int phoneNumber;
+	int money;
 	string ID;
 	string password;
 	string gender;
@@ -21,8 +22,11 @@ void signUpView(Managing& managing) {
 	cin >> gender;
 	cout << "\n폰번호 : ";
 	cin >> phoneNumber;
+	cout << "\n가진돈 : ";
+	cin >> money;
 
-	signUp(managing, name, address, phoneNumber, ID, password, gender);
+
+	signUp(managing, name, address, phoneNumber, money, ID, password, gender);
 }
 
 
@@ -38,6 +42,8 @@ void signInView(Managing& managing) {
 
 }
 
+
+
 void signOutView(Managing& managing) {
 	signOut(managing);
 	system("cls");
@@ -46,5 +52,17 @@ void signOutView(Managing& managing) {
 
 void statsView(Managing& managing) {
 	system("cls");
-	cout << "ID : " << managing.user_ID << "\n이름 : " << managing.user_name << "\n성별 : " << managing.user_gender << "\n폰번호 : " << managing.user_phoneNumber << "\n주소 : " << managing.user_address << "\n\n" << endl;
+	cout << "ID : " << managing.usingMember->GetID() << "\n이름 : " << managing.usingMember->GetName() << "\n성별 : " << managing.usingMember->GetGender() << "\n폰번호 : " << managing.usingMember->GetPhoneNumber() << "\n주소 : " << managing.usingMember->GetAddress() <<"\n가진돈 : " <<managing.usingMember->GetMoney() <<"\n" << endl;
+	
+	if (managing.usingMember->basket.size() == 0) {
+		cout << "장바구니가 비었습니다.\n\n\n" << endl;
+	}
+	else {
+		cout << "장바구니 목록\n\n" << endl;
+		for (int i = 0; i < managing.usingMember->basket.size(); i++) {
+			cout << managing.usingMember->basket[i].GetName() << endl;
+		}
+		
+	}
+
 }

@@ -13,7 +13,8 @@ public:
 	int GetSpare();
 	string GetCategory();
 	string GetName();
-
+	int DecSpare();\
+	void SetSpare(int inputSpare);
 private:
 	int price;
 	int spare;
@@ -25,42 +26,39 @@ private:
 class User {
 public:
 	User();
-	User(const string name, const string address, int phoneNumber);
+	User(const string name, const string address, int phoneNumber, int money);
 	~User();
 
 	string GetName();
 	string GetAddress();
 	int GetPhoneNumber();
+	int GetMoney();
+	void SetMoney(int spareMoney);
 private:
 	string name;
 	string address;
 	int phoneNumber;
+	int money;
 };
 
 class Member : public User {
 public:
 	Member();
-	Member(const string name, const string address, int phoneNumber, const string ID, const string password, const string gender);
+	Member(const string name, const string address, int phoneNumber, int money,const string ID, const string password, const string gender);
 	~Member();
-	vector<Product> GetBasket();
-	vector<Product> SetBasket();
+	void SetBasket(Product& product);
 	string GetID();
 	string GetPassword();
 	string GetGender();
+	int GetPoint();
+	vector <Product> basket;
 private:
 	string ID;
 	string password;
 	string gender;
-	vector <Product> basket;
+	int point=0;
+
 };
-
-class Root : public Member {
-public:
-	void registerProduct();
-};
-
-
-
 
 
 	

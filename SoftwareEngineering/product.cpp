@@ -21,6 +21,18 @@ string Product::GetName() {
 	return name;
 }
 
+int Product::DecSpare()
+{
+	spare = spare - 1;
+	return spare;
+}
+
+void Product::SetSpare(int inputSpare)
+{
+	spare = inputSpare;
+}
+
+
 
 
 Product::~Product() {}

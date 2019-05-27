@@ -10,10 +10,12 @@ using namespace std;
 //상품 목록보기
 void standView(Managing& managing);
 
+
+//장바구니
+void basketView(Managing& managing);
+
 //상품 구매
-
-
-//결제
+void purchaseView(Managing& managing);
 
 
 //회원 정보
